@@ -1,21 +1,25 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import MainContainer from "@components/MainContainer.astro";
-import Container from "@components/Container.astro";
 import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as AboutUs } from "@content/aboutUs.md"
 import { Image } from "astro:assets";
+
+
 ---
 
 <Layout title="Astro Starter">
     <Image src={AstroLogo} alt="" />
     <h1>a simple Astro Starter Kit</h1>
-  <!-- <Container> -->
+
     <MainContainer>
       <AboutUs>
       </AboutUs>
 
+      <h2>Featured</h2>
+
+
+
     </MainContainer>
-    <!-- </Container> -->
 
 </Layout>
