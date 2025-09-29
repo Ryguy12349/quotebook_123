@@ -1,0 +1,3 @@
+## About Us
+
+Welcome to our quote community! A place where words are collected, shared, and celebrated. Think of it as a living library of inspiration, built by people who love meaningful ideas. You can explore quotes from timeless thinkers, writers, and everyday voices, then save your favorites by pinning or liking them to your personal collection. Each day we highlight a handful of quotes in our Featured section — words that stood out for their insight, humor, or beauty. Whether you come here to reflect, to gather motivation, or simply to enjoy the craft of language, this is your space to discover and share the power of words.
