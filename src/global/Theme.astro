@@ -2,16 +2,21 @@
 // we can import fonts here, after installing them via Fontsource
 // see https://fontsource.org/docs/installation for instructions
 import "@fontsource/karla";
+import '@fontsource/kaushan-script';
+
 ---
 
 <style is:global>
   /* We can use this style tag to set up colors, fonts, etc. */
   :root {
-    --color-background: rgb(24, 0, 24);
-    --color-text: rgb(240, 240, 240);
-    --color-accent: rgb(0, 200, 255);
-    --color-focus-ring: rgb(255, 0, 255);
+    --color-background: rgb(40, 33, 25);
+    --color-main-container: #D9D9D9;
+    --color-title: #E0D2B7;
+    --color-text: rgb(40, 33, 25);
+    --color-accent: rgb(200, 115, 55);
+    --color-focus-ring: rgb(165, 77, 40);
 
+    --font-title: "kaushan-script", cursive;
     --font-body: "Karla", sans-serif;
     --font-headings: "Karla", sans-serif;
 
@@ -35,6 +40,10 @@ import "@fontsource/karla";
   h5,
   h6 {
     color: var(--color-accent);
+  }
+
+  h1 {
+    font-family: var(--font-title);
   }
 
   /* default focus ring styles */
