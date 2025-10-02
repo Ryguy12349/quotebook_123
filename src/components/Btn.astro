@@ -1,0 +1,23 @@
+---
+const { text, radiusTop="0", radiusBottom="0", radiusRight="0", radiusLeft="0" } = Astro.props;
+
+---
+
+<div class="btn" style={`--radius-top:${radiusTop}; --radius-right:${radiusRight}; --radius-botton:${radiusBottom}; --radius-left:${radiusLeft};`}>
+    <p>{text}</p>
+</div>
+
+<style>
+    .btn{
+        color: var(--color-main-container);
+        background-color: var(--color-accent);
+        padding: .5rem;
+        width: fit-content;
+        border-radius: var(--radius-top) var(--radius-right) var(--radius-botton) var(--radius-left);
+    }
+
+    .btn:hover{
+        color: var(--color-main-container);
+        background-color: var(--color-background);
+    }
+</style>

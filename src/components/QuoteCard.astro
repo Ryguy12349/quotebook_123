@@ -1,4 +1,20 @@
 ---
+import Btn from "./Btn.astro"
+
+const { text } = Astro.props;
 
 ---
+<!-- https://github.com/not-kristoff/kristoff-dw2/blob/main/src/data/items.js -->
+<!-- https://github.com/not-kristoff/kristoff-dw2/blob/main/src/pages/index.astro -->
 
+<figure class="quote-card">
+    <img src="" alt=" ">
+    <figcaption></figcaption>
+    <detail>
+        <summary><Btn radiusLeft="2rem"></Btn></summary>
+        <slot></slot>
+    </detail>
+</figure>
+
+<style>
+</style>
