@@ -46,6 +46,12 @@ import '@fontsource/kaushan-script';
     font-family: var(--font-title);
   }
 
+  p {
+  max-width: 80ch;
+  word-wrap: break-word; /* Ensures long words also break if they exceed the width */
+  overflow-wrap: break-word; /* Modern alternative to word-wrap */
+  }
+
   /* default focus ring styles */
   *:focus-visible {
     outline: 3px solid var(--color-focus-ring);
