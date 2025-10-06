@@ -1,20 +1,58 @@
 ---
 import Btn from "./Btn.astro"
+import { Image } from "astro:assets";
 
-const { text } = Astro.props;
+const { linkImage, quote, Content } = Astro.props;
 
 ---
 <!-- https://github.com/not-kristoff/kristoff-dw2/blob/main/src/data/items.js -->
 <!-- https://github.com/not-kristoff/kristoff-dw2/blob/main/src/pages/index.astro -->
 
 <figure class="quote-card">
-    <img src="" alt=" ">
-    <figcaption></figcaption>
-    <detail>
-        <summary><Btn radiusLeft="2rem"></Btn></summary>
-        <slot></slot>
-    </detail>
+    <Image src={linkImage} alt=" "/>
+        <details>
+            <summary><figcaption>{quote}</figcaption><Btn radiusBottom="2rem">Dive Deeper</Btn></summary>
+            <div class="content"><Content/></div>
+        </details>
 </figure>
 
-<style>
+<style>   
+    .quote-card{
+     background-color: var(--color-main-container);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    }
+
+    .guote-card-content{
+
+    }
+
+    .quote-card img{
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .quote-card figcaption{
+
+    }
+
+    .quote-card details{
+        content: none;
+    }
+
+    .quote-card summary{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .quote-card details summary::marker,:is(::-webkit-details-marker) {
+        content: none;
+    }
+
+    .quote-card .content{
+        padding: 1rem;
+    }
 </style>

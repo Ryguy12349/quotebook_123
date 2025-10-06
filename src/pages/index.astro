@@ -8,7 +8,9 @@ import Btn from "@components/Btn.astro";
 import HeroPhoto from "@assets/images/man-throwing-a-stone.jpg";
 import { Content as AboutUs } from "@content/aboutUs.md"
 import { Content as SignUp } from "@content/signUp.md"
+import QuoteCard from "@components/QuoteCard.astro";
 
+import {quotes} from "../data/quotes"
 
 
 ---
@@ -25,11 +27,16 @@ import { Content as SignUp } from "@content/signUp.md"
         <AboutUs>
         </AboutUs>
       </section>
+
       <section class="featured">
         <h2>Featured</h2>
-        <Btn text="Learn More" radiusLeft="1rem"></Btn>
+
+        {quotes.map((item)=>{
+          return (<QuoteCard linkImage={item.image} quote={item.quote} Content={item.Content}></QuoteCard>);
+        })}
 
       </section>
+
       <section class="sign-up">
         <SignUp>
         </SignUp>

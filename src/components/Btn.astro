@@ -1,10 +1,10 @@
 ---
-const { text, radiusTop="0", radiusBottom="0", radiusRight="0", radiusLeft="0" } = Astro.props;
+const {  radiusTop="0", radiusBottom="0", radiusRight="0", radiusLeft="0" } = Astro.props;
 
 ---
 
 <div class="btn" style={`--radius-top:${radiusTop}; --radius-right:${radiusRight}; --radius-botton:${radiusBottom}; --radius-left:${radiusLeft};`}>
-    <p>{text}</p>
+    <p><slot/></p>
 </div>
 
 <style>
