@@ -13,11 +13,11 @@ const item = {
 
 // To use images in Astro we have to import them:
 
-import quote1image from "../assets/images/man-throwing-a-stone.jpg"
-import quote2image from "../assets/images/man-throwing-a-stone.jpg"
-import quote3image from "../assets/images/man-throwing-a-stone.jpg"
-import quote4image from "../assets/images/man-throwing-a-stone.jpg"
-import quote5image from "../assets/images/man-throwing-a-stone.jpg"
+import quote1image from "../assets/images/nora-jane-long-ELlinjlfwL8-unsplash.jpg"
+import quote2image from "../assets/images/neom-OCKa0AkSyRc-unsplash.jpg"
+import quote3image from "../assets/images/danika-perkinson-10IE8OhWsT0-unsplash.jpg"
+import quote4image from "../assets/images/look-again-digital-MltM5Bu-mYg-unsplash.jpg"
+import quote5image from "../assets/images/brett-jordan-LEAym6D9uRg-unsplash.jpg"
 
 
 
