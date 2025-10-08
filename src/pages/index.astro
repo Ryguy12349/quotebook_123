@@ -9,9 +9,9 @@ import HeroPhoto from "@assets/images/man-throwing-a-stone.jpg";
 import { Content as AboutUs } from "@content/aboutUs.md"
 import { Content as SignUp } from "@content/signUp.md"
 import QuoteCard from "@components/QuoteCard.astro";
+import Footer from "@components/Footer.astro";
 
 import {quotes} from "../data/quotes"
-import {quotesLength} from "../data/quotes"
 
 ---
 
@@ -28,12 +28,12 @@ import {quotesLength} from "../data/quotes"
 
 
   <MainContainer>
-    <section class="about-us">
+    <section id="about-us" class="about-us">
       <AboutUs>
       </AboutUs>
     </section>
 
-    <section class="featured">
+    <section id="featured" class="featured">
       <h2>Featured</h2>
       <section class="masonry">
         {quotes.map((item)=>{
@@ -42,7 +42,7 @@ import {quotesLength} from "../data/quotes"
       </section>
     </section>
 
-    <section class="sign-up">
+    <section id="sign-up" class="sign-up">
       <SignUp>
       </SignUp>
       <div class="signUpBtn">
@@ -52,13 +52,17 @@ import {quotesLength} from "../data/quotes"
 
   </MainContainer>
 
+  <Footer>
 
-  <section class="footer">
-    
-  </section>
+  </Footer>
+
 </Layout>
 
 <style>
+  h2 {
+    margin-bottom: .5rem;
+  }
+
   section{
     margin-bottom: 2rem;
   }
