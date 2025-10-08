@@ -38,7 +38,13 @@ export const quotes = [
     {Content: LaoTzu ,quote:'“The journey of a thousand miles begins with one step.”', image:quote2image},
     {Content: GKChesterton ,quote:'“Anything worth doing is worth doing badly.”', image:quote3image},
     {Content: MarcusAurelius ,quote:'“It is not death a man should fear, but he should fear never beginning to live.”', image:quote4image},
-    {Content: TheodoreRoosevelt ,quote:'“Do what you can with what you have, where you are.”', image:quote5image}];
+    {Content: TheodoreRoosevelt ,quote:'“Do what you can with what you have, where you are.”', image:quote5image}
+
+];
+
+// To finds the length of an array we can use .length
+
+export const quotesLength = quotes.length;
 
 
 // Arrow function

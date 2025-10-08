@@ -5,8 +5,6 @@ import { Image } from "astro:assets";
 const { linkImage, quote, Content } = Astro.props;
 
 ---
-<!-- https://github.com/not-kristoff/kristoff-dw2/blob/main/src/data/items.js -->
-<!-- https://github.com/not-kristoff/kristoff-dw2/blob/main/src/pages/index.astro -->
 
 <figure class="quote-card">
     <Image src={linkImage} alt=" "/>
@@ -21,6 +19,8 @@ const { linkImage, quote, Content } = Astro.props;
     border-radius: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    aspect-ratio: 1 /.75;
+    width: clamp(300px, 50vw, 435px);
     }
 
     .quote-card img{
@@ -50,4 +50,10 @@ const { linkImage, quote, Content } = Astro.props;
     .quote-card details summary::marker,:is(::-webkit-details-marker) {
         content: none;
     }
+
+    /* @media (max-width:540px) {
+
+
+    } */
+
 </style>
