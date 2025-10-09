@@ -14,6 +14,11 @@ import Header from "@components/Header.astro";
 
 import {quotes} from "../data/quotes"
 
+const quoteCount=quotes.length;
+const midPoint = Math.ceil(quoteCount/2);
+const firstHalf = quotes.slice(0, midPoint);
+const secondHalf = quotes.slice(midPoint, quoteCount);
+
 ---
 
 <Layout title="Astro Starter">
@@ -37,9 +42,19 @@ import {quotes} from "../data/quotes"
     <section id="featured" class="featured">
       <h2>Featured</h2>
       <section class="masonry">
-        {quotes.map((item)=>{
+        <div class="col1">
+        {firstHalf.map((item)=>{
           return (<QuoteCard linkImage={item.image} quote={item.quote} Content={item.Content}></QuoteCard>);
         })}
+        </div>
+        <div class="col2">
+          {secondHalf.map((item)=>{
+          return (<QuoteCard linkImage={item.image} quote={item.quote} Content={item.Content}></QuoteCard>);
+        })}
+        </div>
+        <!-- {quotes.map((item)=>{
+          return (<QuoteCard linkImage={item.image} quote={item.quote} Content={item.Content}></QuoteCard>);
+        })} -->
       </section>
     </section>
 
@@ -60,6 +75,7 @@ import {quotes} from "../data/quotes"
 </Layout>
 
 <style>
+
   h2 {
     margin-bottom: .5rem;
   }
