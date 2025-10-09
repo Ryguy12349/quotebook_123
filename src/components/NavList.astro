@@ -12,11 +12,25 @@
 </nav>
 
 <style>
-    nav {
-        background-color: #242115;
+    ul {
+        display: flex;
+        flex-flow: column wrap;
+        height: 10rem;
+        align-items: flex-start;
     }
 
-    nav li {
-        color: ;
+    li {
+      padding: 1rem 0px;
+
     }
+
+    li::marker {
+        content: none;
+    }
+
+    a {
+      color: var(--color-main-container); 
+      text-decoration: none;
+    }
+
 </style>

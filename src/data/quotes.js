@@ -21,7 +21,7 @@ import quote5image from "../assets/images/brett-jordan-LEAym6D9uRg-unsplash.jpg"
 
 
 
-// To use Markdown in Astro we have to import them:
+// To use Markdown in Astro we have to import them, and captializat everything like it is a component:
 
 
 import {Content as Anon} from "@content/anon.md"

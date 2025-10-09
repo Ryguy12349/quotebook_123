@@ -4,6 +4,34 @@ import NavList from "@components/NavList.astro"
 ---
 
   <section id="footer" class="footer">
-    <NavList></NavList>
+    <div class="innerContainer">
+     <NavList class="navlist"></NavList>
+    </div>
 
   </section>
+
+ <style>
+
+  section.footer {
+    background-color: #19170f;
+
+  }
+
+  .innerContainer{
+    margin: 0 auto;
+    max-width:100%;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10rem;
+    grid-template-areas:
+      "a b";    
+
+  }
+
+    .navlist {
+      grid-area: a;
+
+    }
+
+ </style>
