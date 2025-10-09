@@ -17,6 +17,8 @@ const {linkHeight = '0'}  = Astro.props;
         flex-flow: column wrap;
         align-items: flex-start;
         height: var(--height);
+        justify-content: center;
+        gap: 1rem;
     }
 
     li {
@@ -28,9 +30,10 @@ const {linkHeight = '0'}  = Astro.props;
         content: none;
     }
 
-    a {
-      color: var(--color-main-container); 
-      text-decoration: none;
-    }
+        a {
+            color: var(--color-main-container); 
+            text-decoration: none;
+            white-space: nowrap;
+        }
 
 </style>
