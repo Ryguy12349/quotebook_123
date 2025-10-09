@@ -1,0 +1,59 @@
+---
+import NavList from "./NavList.astro";
+
+
+---
+
+
+<header>
+    <h1>QuoteBook</h1>
+    <details>
+        <summary><span></span><span></span><span></span></summary>
+        <div class="burgerBox">
+        <NavList linkHeight="17rem"></NavList>
+        </div>
+    </details>
+</header>
+
+<style>
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-main-container);
+        padding: .5rem 1rem;
+        align-items: center;
+    }
+
+    summary::marker {
+        content: none;
+    } 
+ 
+    span {
+        display: block;
+        width: 24px;
+        height: 3px;
+        margin: 3px 0;
+        background:var(--color-background);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    details {
+        position: relative;
+    }
+    .burgerBox {
+        background-color: #19170f;
+        position: absolute;
+        top: 46px;
+        right: -18px;
+        display: flex;
+        align-items: center;
+        color: var(--color-background);
+        padding: 0 40px 0 0;
+    }
+
+</style>

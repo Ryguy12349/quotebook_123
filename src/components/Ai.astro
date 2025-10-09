@@ -1,0 +1,107 @@
+---
+
+---
+
+<!-- A header nav, that is sticky and takes no space up on the page. It should still be visible to screeners. It has a Logo to the left and s dropdown burger menu to the right -->
+<header>
+    <h1>QuoteBook AI</h1>
+    <details>
+        <summary></summary>
+    <div class="burgerBox">
+        <a href="/"><button>Home</button></a>
+        <a href="/about"><button>About</button></a>
+        <a href="/contact"><button>Contact</button></a>
+    </div>
+    </details>
+</header>
+
+<style>
+
+    header {
+        position: sticky;
+        top: 0;
+        background-color: var(--color-background);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        border-bottom: 2px solid var(--color-accent);
+        z-index: 1000;
+    }
+
+    h1 {
+        font-family: var(--font-title);
+        color: var(--color-accent);
+        font-size: 1.5rem;
+    }
+
+    details {
+        position: relative;
+    }
+
+    summary {
+        list-style: none;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    summary::before,
+    summary::after,
+    summary div {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-accent);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    summary::before {
+        transform-origin: top left;
+    }
+
+    summary::after {
+        transform-origin: bottom left;
+    }
+
+    details[open] summary::before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    details[open] summary::after {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    details[open] summary div {
+        opacity: 0;
+    }
+
+    .burgerBox {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-color: var(--color-background);
+        border: 2px solid var(--color-accent);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+        gap: 0.5rem;
+        z-index: 1000;
+    }
+
+    .burgerBox a button {
+        background-color: transparent;
+        border: none;
+        color: var(--color-accent);
+        font-size

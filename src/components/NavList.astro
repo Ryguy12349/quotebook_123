@@ -1,9 +1,9 @@
 ---
-
+const {linkHeight = '0'}  = Astro.props;
 ---
 
 <nav>
-    <ul>
+    <ul style={`--height:${linkHeight};`}>
         <li><a href="#about-us">About Us</a></li>
         <li><a href="#featured">Featured</a></li>
         <li><a href="#sign-up">Sign Up</a></li>
@@ -15,8 +15,8 @@
     ul {
         display: flex;
         flex-flow: column wrap;
-        height: 10rem;
         align-items: flex-start;
+        height: var(--height);
     }
 
     li {

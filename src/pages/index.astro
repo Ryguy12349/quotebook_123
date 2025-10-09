@@ -10,19 +10,21 @@ import { Content as AboutUs } from "@content/aboutUs.md"
 import { Content as SignUp } from "@content/signUp.md"
 import QuoteCard from "@components/QuoteCard.astro";
 import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Ai from "@components/Ai.astro";
 
 import {quotes} from "../data/quotes"
 
 ---
 
 <Layout title="Astro Starter">
-  <section class="header">
 
-  </section>
+  <Header>
+
+  </Header>
 
   <section class="hero">
-    <Image src={HeroPhoto} alt="" />
-    <h1>QuoteBook</h1>
+    <Image src={HeroPhoto} alt=" "/>
     <p style="color: var(--color-main-container);">Photo by Viktor Hanacek from picjumbo.com</p>
   </section>
 
@@ -86,11 +88,22 @@ import {quotes} from "../data/quotes"
     align-self: center;
   }
 
+    section.hero img {
+      object-fit: cover;
+      object-position: center;
+      width: 100vw;
+      height: clamp(40vw,1em,36vw);
+    }
+
     @media (max-width:1010px) {
       section .masonry {
         grid-template-columns: 1fr;
 
       }
+      /* section.hero img {
+        height: ;
+      } */
     }
+
 
 </style>
