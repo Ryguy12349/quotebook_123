@@ -11,7 +11,6 @@ import { Content as SignUp } from "@content/signUp.md"
 import QuoteCard from "@components/QuoteCard.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import Ai from "@components/Ai.astro";
 
 import {quotes} from "../data/quotes"
 
@@ -25,7 +24,7 @@ import {quotes} from "../data/quotes"
 
   <section class="hero">
     <Image src={HeroPhoto} alt=" "/>
-    <p style="color: var(--color-main-container);">Photo by Viktor Hanacek from picjumbo.com</p>
+    <p class="caption">Photo by Viktor Hanacek from picjumbo.com</p>
   </section>
 
 
@@ -48,7 +47,7 @@ import {quotes} from "../data/quotes"
       <SignUp>
       </SignUp>
       <div class="signUpBtn">
-        <Btn href="/sign-up" radiusTop="2rem" radiusBottom="2rem" radiusRight="2rem" radiusLeft="2rem">Sign Up</Btn>
+        <Btn href="/sign-up" padding="1rem 2rem" radiusTop="2rem" radiusBottom="2rem" radiusRight="2rem" radiusLeft="2rem">Sign Up</Btn>
       </div>
     </section>
 
@@ -88,21 +87,29 @@ import {quotes} from "../data/quotes"
     align-self: center;
   }
 
-    section.hero img {
-      object-fit: cover;
-      object-position: center;
-      width: 100vw;
-      height: clamp(40vw,1em,36vw);
-    }
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
 
+  section.hero img {
+    object-fit: cover;
+    object-position: center;
+    width: 100vw;
+    height: clamp(40vw,1em,36vw);
+  }
+
+  .caption{
+    color: #8e8e8e;
+    font-size: .75rem;
+    align-self: flex-end;
+  }
+  
     @media (max-width:1010px) {
       section .masonry {
         grid-template-columns: 1fr;
 
       }
-      /* section.hero img {
-        height: ;
-      } */
     }
 
 
