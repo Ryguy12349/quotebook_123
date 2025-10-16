@@ -42,18 +42,30 @@ import NavList from "./NavList.astro";
         transition: all 0.3s ease;
     }
 
+    summary:hover span{
+        background: var(--color-accent);
+    }
+
     details {
         position: relative;
     }
     .burgerBox {
         background-color: #19170f;
         position: absolute;
-        top: 46px;
+        top: 47px;
         right: -18px;
         display: flex;
         align-items: center;
         color: var(--color-background);
         padding: 0 40px 0 0;
+    }
+
+    @media (max-width:1010px) {
+        details {
+
+        }
+
+
     }
 
 </style>
