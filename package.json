@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/dancing-script": "^5.2.8",
+    "@fontsource-variable/grenze-gotisch": "^5.2.8",
+    "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/karla": "^5.2.8",
     "@fontsource/kaushan-script": "^5.2.8",
     "astro": "^5.14.1"

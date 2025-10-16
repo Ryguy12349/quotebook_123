@@ -3,6 +3,10 @@
 // see https://fontsource.org/docs/installation for instructions
 import "@fontsource/karla";
 import '@fontsource/kaushan-script';
+import '@fontsource-variable/dancing-script';
+import '@fontsource/bebas-neue';
+import '@fontsource-variable/grenze-gotisch';
+
 
 ---
 
@@ -18,7 +22,9 @@ import '@fontsource/kaushan-script';
 
     --font-title: "Kaushan-script", cursive;
     --font-body: "Karla", sans-serif;
-    --font-headings: "Karla", sans-serif;
+    --font-headings: "Bebas Neue", sans-serif;
+    --font-quotes: "Grenze Gotisch Variable", system-ui;
+    --font-btn: "Bebas Neue", sans-serif;
 
     font-size: 18px;
 
@@ -44,6 +50,14 @@ import '@fontsource/kaushan-script';
 
   h1 {
     font-family: var(--font-title);
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-headings);
   }
 
   p {
